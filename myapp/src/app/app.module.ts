@@ -17,6 +17,11 @@ import { NewaccountComponent } from './accounts/newaccount/newaccount.component'
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ObservablesComponent } from './observables/observables.component';
+import { TformsComponent } from './tforms/tforms.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { AppRoutingComponent } from './app-routing/app-routing.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'ecomm', component: EcommComponent },
   { path: 'accounts', component: AccountsComponent },
   { path: 'observables', component: ObservablesComponent },
+  { path: 'tforms', component: TformsComponent },
 ];
 
 
@@ -47,6 +53,11 @@ const appRoutes: Routes = [
     NewaccountComponent,
     HomeComponent,
     ObservablesComponent,
+    TformsComponent,
+    LoginComponent,
+    SignupComponent,
+    AppRoutingComponent,
+    DashboardComponent,
     
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
