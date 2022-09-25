@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-signin',
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.component.css']
 })
-export class LoginComponent implements OnInit {
+export class SigninComponent implements OnInit {
 
-  registerForm: FormGroup;
+  registerForm!: FormGroup;
   uemail: string = '';
   upassword: string = '';
   submitted: boolean = false;
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     this.uemail = this.registerForm.get('uemail')?.value;
     this.upassword = this.registerForm.get('upassword')?.value;
     if (this.uemail == 'maran77@gmail.com' && this.upassword == 'abcd') {
-      // alert("Form Submitted Successfully"+this.upassword);
+     // alert("Form Submitted Successfully"+this.upassword);
       this.router.navigate(['dashboard']);
     } else {
       alert('wrong credential');

@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolioapp": {
+    "eventmanagementapp": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portfolioapp",
+            "outputPath": "dist/eventmanagementapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portfolioapp:build:production"
+              "browserTarget": "eventmanagementapp:build:production"
             },
             "development": {
-              "browserTarget": "portfolioapp:build:development"
+              "browserTarget": "eventmanagementapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portfolioapp:build"
+            "browserTarget": "eventmanagementapp:build"
           }
         },
         "test": {
@@ -97,5 +101,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "eventmanagementapp"
 }
